@@ -1,0 +1,19 @@
+﻿@model List<InstituteAdministration.Models.StudentCourse>
+
+@if (Model.Count == 0)
+{
+    <h1>No students with the given course!</h1>
+}
+else
+{
+    <h1>Students with the Course: @Model[0].Course.Name</h1>
+    <p>Course Description: @Model[0].Course.Description</p>
+
+    <ul>
+        @foreach (var studentCourse in Model)
+        {
+            <li>@studentCourse.Student.Name</li>
+        }
+    </ul>
+
+}

@@ -1,0 +1,17 @@
+﻿@model InstituteAdministration.ViewModels.StudentDetailViewModel
+
+<h1>@Model.Name</h1>
+
+<table class="table">
+    <tr>
+        <th>Teacher</th>
+        <td>@Model.TeacherName</td>
+    </tr>
+    <tr>
+        <th>Courses</th>
+        <td>@Model.CourseText</td>
+    </tr>
+
+</table>
+
+<a asp-controller="Course" asp-action="AddStudent" asp-route-id="@Model.StudentId">Add additional courses</a>

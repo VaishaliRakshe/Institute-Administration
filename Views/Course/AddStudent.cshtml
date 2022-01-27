@@ -1,0 +1,13 @@
+﻿@model InstituteAdministration.ViewModels.AddStudentCourseViewModel
+
+<h1>Add Tag to Event: @Model.Student.Name</h1>
+
+<form asp-controller="Course" asp-action="AddStudent" method="post">
+    <input type="hidden" value="@Model.Student.Id" name="StudentId" />
+    <div class="form-group">
+        <label asp-for="CourseId">Course</label>
+        <select asp-for="CourseId" asp-items="Model.Courses"></select>
+        <span asp-validation-for="CourseId"></span>
+    </div>
+    <input type="submit" value="Add Course" />
+</form>

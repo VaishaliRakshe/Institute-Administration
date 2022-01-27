@@ -1,0 +1,17 @@
+﻿@model InstituteAdministration.ViewModels.AddTeacherViewModel;
+
+<h1>Add New Teacher</h1>
+
+<form asp-controller="Teacher" asp-action="ProcessAddTeacherForm" method="post">
+    <div class="form-group">
+        <label asp-for="Name">Teacher Name</label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Location">Teacher Location</label>
+        <input asp-for="Location" />
+        <span asp-validation-for="Location"></span>
+    </div>
+    <input type="submit" value="Add New Teacher" />
+</form>
